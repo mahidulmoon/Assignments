@@ -9,6 +9,17 @@ class Movie(models.Model):
     rating = models.CharField(max_length=15)
     release_date = models.CharField(max_length=15)
 
+    def avg_rating(self):
+        sum = 0
+        ratings = Rating.objects.filter(movie_id=self)
+        for rating in ratings:
+            sum += rating.rating
+        
+        if len(ratings)>0:
+            return sum/len(ratings)
+        else:
+            return 0
+
 
 
 
