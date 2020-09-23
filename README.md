@@ -1,5 +1,9 @@
 # Assignments
 
+superuser = username:testuser  password:1234
+registersuer = username:mahidulmoon password:1114012833m
+
+
 Backend_language = python3.8,django3.2,djangorestframework3.1
 database = sqlite3
 
