@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .serializer import MovieSerializer
+from .serializer import MovieSerializer,RatingSerializer
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
-from .models import Movie
+from .models import Movie,Rating
 
 
 class MovieViewSet(viewsets.ModelViewSet):
@@ -13,3 +13,9 @@ class MovieViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
     
+
+class RatingViewSet(viewsets.ModelViewSet):
+    queryset = Rating.objects.all()
+    serializer_class = RatingSerializer
+    # authentication_classes = (TokenAuthentication,)
+    # permission_classes = (IsAuthenticated,)
