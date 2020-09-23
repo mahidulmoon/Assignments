@@ -21,3 +21,14 @@ problems = I didn't face any major problem because I have done already 3 big pro
             
 remaining problems = None
 
+
+
+apis =[
+  userLogin: 127.0.0.1:8000/user/authenticate/,
+  userRegistration: 127.0.0.1:8000/user/registration/,
+  viewMovieList: http://127.0.0.1:8000/movie/movielist/,
+  addMovie: http://127.0.0.1:8000/movie/movielist/,
+  addRating: http://127.0.0.1:8000/movie/ratinglist/,
+  specificMoviewithAVGRating: http://127.0.0.1:8000/movie/movielist/2/
+
+]
