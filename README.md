@@ -1,9 +1,10 @@
 # Assignments
 
-Backend_language = django,djangorestframework
+Backend_language = python3.8,django3.2,djangorestframework3.1
 database = sqlite3
 
 setup instructions = Run pip install -r requirements.txt (Python 2), or pip3 install -r requirements.txt (Python 3)
+recommanded =pip3 install -r requirements.txt
 
 
 assumptions = [
