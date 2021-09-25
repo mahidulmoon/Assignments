@@ -1,0 +1,18 @@
+#Given an array nums, write a function to move all zeroes to the end of it while maintaining the relative order of 
+#the non-zero elements.
+
+array1 = [0,1,0,3,12]
+array2 = [1,7,0,0,8,0,10,12,0,4]
+
+def removeZero(arr):
+  current_flag = 0
+  for i in range(len(arr)-1):
+    if arr[i] != 0:
+      arr[current_flag] = arr[i]
+      current_flag = current_flag + 1
+  for i in range(current_flag,len(arr)):
+    arr[i] = 0
+  return arr
+
+print("Result1: ",removeZero(array1))
+print("Result2: ",removeZero(array2))
