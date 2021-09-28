@@ -9,8 +9,15 @@ def removeDuplicates(arr):
     #     if(arr[i] != arr[j]):
     #         arr[i] = arr[j]
     # return i+1
-    newValue = set(arr)
-    return list(newValue)
+
+    # newValue = set(arr)
+    # return list(newValue)
+
+    res = []
+    for i in arr:
+        if i not in res:
+            res.append(i)
+    return res
 
 
 print("value: ",removeDuplicates(value))
