@@ -1,0 +1,18 @@
+
+
+2. 
+# Check the given string it is a palindrome or not.
+
+s = "91219"
+number = int(s)
+flag = number
+reverse = 0
+
+while (number > 0):
+  division = number % 10
+  reverse = reverse * 10 + division
+  number = number // 10
+if(flag == reverse):
+  print("The number is a palindrome")
+else:
+  print("No it is not a palindrome")
