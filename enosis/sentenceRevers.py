@@ -5,4 +5,4 @@ revSentence = []
 splitSentence = sentence.split(" ")
 splitSentence.reverse()
 
-print(splitSentence)
+print(" ".join(splitSentence))
