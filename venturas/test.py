@@ -21,4 +21,15 @@ breadcrumbs = breadcrumb_div.find('li', {
 })
 
 
-print(breadcrumbs)
+# print(breadcrumbs)
+
+product_info_details_div = soup.find('div', {
+  'class': 'articlePurchaseBox css-gxzada'
+})
+product_info_div = product_info_details_div.find('div', {
+  'class': 'articleNameHeader css-t1z1wj'
+})
+
+product_info_div_links = product_info_div.find_all('a')
+
+print(product_info_div_links)
