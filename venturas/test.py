@@ -40,6 +40,9 @@ item_title = ''
 price = ''
 size = ''
 slider_img_url = []
+title_of_description = ''
+title_of_general_description = ''
+title_of_description_itemization = ''
 
 for item in product_info_div:
     x = item.find('span')
@@ -78,5 +81,32 @@ for image in product_slider_image_div:
     for single_img in i:
         slider_img_url.append(media_root_url+single_img['src'])
 
-# print(slider_img_url)
+product_title_description_div = main_content_div.find_all('div', {
+  'class': 'inner'
+})
+
+for row in product_title_description_div:
+    t = row.find_all('h4')
+    for value in t:
+        title_of_description = value.text.strip()
+
+title_description_div = main_content_div.find_all('div', {
+  'class': 'description clearfix test-descriptionBlock'
+})
+
+for row in title_description_div:
+    title_description_div = row.find_all('div', {
+        'class': 'commentItem-mainText test-commentItem-mainText'
+    })
+    for x in title_description_div:
+        title_of_general_description = x.text.strip()
+    another_des = row.find_all('li')
+    queue = []
+    for value in another_des:
+        queue.append(value.text.strip()+'\n')
+    title_of_description_itemization = ''.join(queue)
+
+
+
+# print(title_of_description_itemization)
 
